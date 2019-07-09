@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Simple app</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="justify-content-md-around">
+        <h1 class="display-4">Hello dear visitor!</h1>
+
+        {% if redis_error %}
+        <div class="alert alert-danger">Redis connection doesn't work</div>
+        {% else %}
+        <div class="alert alert-success">You visited this page {{ counter }} time(s).</div>
+        {% endif %}
+      </div>
+    </div>
+
+    <script src="assets/js/bootstrap.min.js"></script>
+  </body>
+
+</html>
